@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CurrencyRatesComponent } from './components/currency-rates/currency-rates.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule, CurrencyRatesComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
