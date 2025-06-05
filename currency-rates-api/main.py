@@ -7,6 +7,7 @@ import requests
 import json
 import mysql.connector
 from mysql.connector import Error
+import os
 
 app = FastAPI(title="Currency Rates API")
 
@@ -19,10 +20,10 @@ app.add_middleware(
 )
 
 DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "",
-    "database": "currency_rates"
+    "host": os.getenv("DB_HOST", "localhost"),
+    "user": os.getenv("DB_USER", "root"),
+    "password": os.getenv("DB_PASSWORD", ""),
+    "database": os.getenv("DB_NAME", "currency_rates")
 }
 
 class CurrencyRate(BaseModel):
