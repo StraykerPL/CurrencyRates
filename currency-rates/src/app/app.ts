@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CurrencyRatesComponent } from './components/currency-rates/currency-rates.component';
 import { CommonModule } from '@angular/common';
+import { HomePageComponent } from './components/home-page.component';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, CurrencyRatesComponent],
+  imports: [CommonModule, HomePageComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
